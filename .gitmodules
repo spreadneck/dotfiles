@@ -2,3 +2,6 @@
 	path = neovim/.config/nvim
 	url = https://github.com/spreadneck/nvim
 	branch = main
+[submodule "vimwiki/vimwiki"]
+	path = vimwiki/vimwiki
+	url = git@github.com:spreadneck/vimwiki.git

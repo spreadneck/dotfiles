@@ -27,6 +27,7 @@ Two directories are provided as submodules:
 - `neovim` – linked to your personal Neovim config (submodule)
 - `vimwiki` – personal notes (submodule)
 
+=======
 
 ## Stowing packages
 
@@ -49,6 +50,7 @@ Remove symlinks created by stow with the `-D` flag:
 stow -D bash  # remove bash config
 ```
 
+=======
 
 ### Tmux plugins
 
@@ -64,4 +66,3 @@ git submodule update --remote
 ```
 
 Only stow the packages you need on a given system.
-

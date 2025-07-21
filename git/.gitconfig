@@ -1,5 +1,7 @@
-[init]
-	defaultBranch = main
 [user]
 	name = spreadneck
 	email = nate@spreadneck.com
+[core]
+    editor = nvim
+[init]
+	defaultBranch = main

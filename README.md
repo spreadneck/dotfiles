@@ -20,6 +20,15 @@ Two directories are provided as submodules:
 - `neovim/.config/nvim` – Neovim configuration
 - `vimwiki/vimwiki` – personal Vimwiki notes
 
+## Available packages
+
+- `bash` – Bash shell configuration
+- `tmux` – tmux terminal multiplexer setup
+- `neovim` – linked to your personal Neovim config (submodule)
+- `vimwiki` – personal notes (submodule)
+
+=======
+
 ## Stowing packages
 
 Run `stow` from the repository root for each package you want to enable. For example:
@@ -32,6 +41,16 @@ stow vimwiki
 ```
 
 This will create the appropriate symlinks in your home directory (e.g. `~/.bashrc`, `~/.config/tmux`).
+
+### Unstowing packages
+
+Remove symlinks created by stow with the `-D` flag:
+
+```bash
+stow -D bash  # remove bash config
+```
+
+=======
 
 ### Tmux plugins
 
@@ -47,4 +66,3 @@ git submodule update --remote
 ```
 
 Only stow the packages you need on a given system.
-

@@ -1,0 +1,7 @@
+[user]
+	name = Nate McClure
+	email = nate@spreadneck.com
+
+[includeIf "hasconfig:remote.*.url:github.com"]
+    path = ~/.config/git/github.gitconfig
+

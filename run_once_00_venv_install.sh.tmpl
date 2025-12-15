@@ -21,3 +21,18 @@ fi
 pip install -U pip
 pip install -r "$PKGDIR/requirements.txt"
 
+# Ensure the chezctl package (stored in the chezmoi scripts directory) is always
+# importable from the virtual environment.
+python - <<'PY'
+import site
+import sys
+from pathlib import Path
+
+site_packages = site.getsitepackages()[0]
+pth_file = Path(site_packages) / "chezctl.pth"
+
+scripts_path = Path.home() / ".local" / "share" / "chezmoi" / "scripts"
+pth_file.write_text(str(scripts_path) + "\n")
+print(f"Configured {pth_file} to add {scripts_path} to sys.path", file=sys.stderr)
+PY
+
